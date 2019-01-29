@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/choujiang.css" rel="stylesheet" />
+		<script src="js/pixel.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+			<h1 class="mui-title">抽奖详情</h1>
+		</header>
+		
+		<div class="mui-content ">
+			<ul class="mui_cj_list mui_cj_detail" >
+				<li>
+					<dl>
+						<dt><img src="img/ico_prize_detail.png" ></dt>
+						<dd class="mui_cj_dec">
+							<p>奖品：心相印手帕纸 茶语丝享纸巾4层24包  <span style="color:#ff0000;">×3</span></p>
+						</dd>
+						<dd class="mui_cj_bt">
+							<span class="dataDf">1月20日  16:00  自动开奖</span>
+						</dd>
+						<dd class="mui_cj_icon">张三<span>赞助</span><dd>
+					</dl>
+				</li>
+				
+			</ul>
+			
+			<div class="mui_cj_block">
+				心相印手帕纸 茶语丝享纸巾4层24包迷你纸巾随身纸巾新老包装随机
+			</div>
+			
+			<div class="mui_cj_imgBlock">
+				<img src="img/ico_cj.jpg" >
+			</div>
+			
+			<div class="mui_cj_simpleInfo">
+				<!--列表 不会有‘审核中’状态， 从发起进入有可能有‘审核中’状态 -->
+				<!--<span class="mui_join_cjBtn" style="background-color: #bbb;">审核中</span>-->
+				<a class="mui_join_cjBtn join_cjBtn">参与抽奖</a>
+				<a class="mui_join_cjBtn join_cjBtn" style='display:none;background-color:#a61263;color:#a61263;'><span style="opacity: 0.5;color:#fff;">待开奖</span></a>
+				<p class="mui_simpleCounts">已有3000人参与，<a href="choujiang-members.html" class="colorDf">查看全部</a> </p>
+			</div>
+			
+			<ul class="mui-list-unstyled mui_simpleAvatarList">
+				<li>
+					<img src="img/ico_avatar.jpg" alt="">
+				</li>
+				<li>
+					<img src="img/ico_avatar_default.jpg" alt="">
+				</li>
+				<li>
+					<img src="img/ico_avatar_default.jpg" alt="">
+				</li>
+				<li>
+					<img src="img/ico_avatar_default.jpg" alt="">
+				</li>
+				<li>
+					<img src="img/ico_avatar_default.jpg" alt="">
+				</li>
+				<li>
+					<img src="img/ico_avatar_default.jpg" alt="">
+				</li>
+		
+			</ul>
+			
+			<div class="mui_btnRowDf">
+				
+				<a class="mui_shareDf" href="choujiang-share-b.html">分享给好友</a>
+				<a class="mui_cjDf" href="lottery.html">我也要发起抽奖</a>
+				<!-- 发起者进入  显示复制抽奖和手动开奖， 隐藏我也要发起抽奖 -->
+				<!-- <a  class="mui_cjDf" href="lottery.html">复制抽奖</a> -->
+				<!-- <a class="mui_openWin">现在开奖</a> -->
+			</div>
+			
+			
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+
+			mui.ready(function () {
+				// 监听参与参与点击按钮  参与,待开奖
+				btnJoin = document.getElementsByClassName('join_cjBtn')
+				mui('.mui_cj_simpleInfo').on('tap' , '.join_cjBtn' ,function(){
+					this.style.display="none"
+					btnJoin[1].style.display="block"
+				})
+			
+					mui('.mui-content').on('tap' ,'a' ,function(){
+						if(this.href){
+							window.location.href = this.href
+						}
+					})
+			})
+		</script>
+
+	</body>
+
+</html>

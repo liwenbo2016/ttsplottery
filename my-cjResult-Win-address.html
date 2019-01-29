@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8" />
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/commit-cj.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cj-address.css"/>
+		<script src="js/pixel.js" type="text/javascript" charset="utf-8"></script>
+	
+	</head>
+	<body style="min-height:100vh;background-color:#f2f2f2">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left">
+			</a>
+			<h1 class="mui-title">抽奖详情</h1>	
+		</header>
+		<div class="mui-content">
+			<div class="mui-table-view mui_order_locationWrap">
+				<p class="mui_adrress_message">请在  <span class="mui_colorDf">01月22日 19：00 前</span> 填写收货信息，通天将发给发起人，超时则无法填写地址。</p>
+				
+				<div class="mui-table-view-cell mui_rowDf">
+					<!-- 无收货地址时 -->
+					<a class="mui-navigate-right mui_order_location_case" href="#" > <!--跳转2.0选地址页面 -->
+						<p class="mui_noneAdress">请填写收货地址</p>
+					</a>
+					<!-- 有收货地址时 -->
+					<a class="mui-navigate-right mui_order_location_case" href="#" style="display:none;"><!--跳转2.0选地址页面 -->
+						<div class="mui_order_userInfo">
+							<label>收货人：</label>
+							<p class="mui_order_name">张三</p>
+							<p class="mui_order_num">13017794009</p>
+						</div>
+						
+						<p class="mui_order_location">
+							<i class="mui_location_ico   "></i>
+							收货地址：广东省深圳市龙华区民治
+						</p>
+					</a>
+					
+				</div>	
+			</div>
+			
+			<div class="mui-table-view mui_order_dispatching">
+				<p class="mui_labelDf">填写备注信息（选填）</p>
+				<div class="mui-table-view-cell mui_rowDf">
+					<textarea class="mui_orderGoods_message" rows="" cols="" maxlength="" placeholder="请填写备注信息"></textarea>
+				</div>
+			</div>
+			
+			<div class="mui_saveBtn_row">
+				<button type="button" class="mui-btn mui-btn-block">保存</button>
+			</div>
+		</div>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+</html>

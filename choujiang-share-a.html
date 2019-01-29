@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/commit-cj.css" />
+		<link rel="stylesheet"  href="css/choujiang-share.css"/>
+		<script src="js/pixel.js"></script>
+		<style>
+			.mui_cjBtnRow .mui-btn:active{opacity: 0.5;}
+		</style>
+	</head>
+
+	<body style="background-color:#f2f2f2;">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+			<h1 class="mui-title">抽奖区</h1>
+		</header>
+		
+		<div class="mui-content mui_shareContent" >
+			<div class="canvas_contain">
+				<!-- createImg -->
+				<div class="imgMask_a">
+					<img id="createImg" src="" alt="">
+				</div>
+				<!-- data -->
+				<div class="mui_shareWrap " id="capture">
+					<div class="mui_shareBorder" >
+						<img class="mui_shareLogo" src="img/share_title.png" >
+						<img class="mui_shareTxt"  src="img/share_txt.png" >
+						<img class="mui_shareQR"  src="img/share_QR.png" >
+						<p class="mui_shareBtTxt">长按识别二维码，进入通天抽奖</p>
+					</div>
+				</div>
+			</div>
+			
+			<p class="mui_shareBt_label">长按图片保存</p>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/toImg.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//let downLoadImg =document.getElementById('downLoadImg')
+			let imgMask = document.querySelector('.imgMask_a')
+			let createImg = document.getElementById('createImg')
+			
+			mui.ready(function(){
+			html2canvas(document.querySelector("#capture")).then(canvas => {
+				imgMask.appendChild(canvas)
+				createImg.src= canvas.toDataURL("image/png");
+				})
+					
+			});	
+			
+		</script>
+	</body>
+
+</html>

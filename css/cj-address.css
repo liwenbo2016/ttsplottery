@@ -1,0 +1,152 @@
+ .mui-bar-nav a.mui-icon-arrowleft:before{
+      vertical-align: middle;
+ }
+  .mui_navBack_label{
+      font-size: 0.4rem;
+      vertical-align: middle;
+	  color: #000000;
+ }
+ .mui_adrress_message{
+ 	padding:0.28rem 0.32rem;
+	font-size:0.32rem;
+	margin-bottom:0.267rem;
+	background-color:#fff;
+	color: #000000;
+ }
+ .mui_adrress_message .mui_colorDf{
+	 color:#ff0101;
+ }
+.mui_order_locationWrap{
+     margin-top:0!important;
+	 background-color:transparent;
+	 margin-bottom:0.32rem;
+}
+.mui_order_locationWrap:after{
+	display:none;
+}
+
+.mui_order_locationWrap .mui_rowDf:after{
+	display:none;
+}
+ .mui_order_location_case{
+     padding-left:1.0810810810810811rem!important;
+     font-size:0.3783783783783784rem;
+	 background-color:#fff;
+}
+ .mui_order_location_case:after{
+     right:0.13513513513513514rem;
+}
+.mui_order_location_case .mui_noneAdress{
+	position:relative;
+	left:-0.72rem;
+	font-size:0.32rem;
+	color:#000;
+}
+ .mui_order_userInfo{
+     padding-left:1.6216216216216217rem;
+     position:relative;
+     font-size:0;
+     color:#000;
+     margin-bottom:0.13513513513513514rem;
+}
+ .mui_order_userInfo label{
+     position:absolute;
+     left:0.13513513513513514rem;
+     top:0;
+     font-size:0.3783783783783784rem;
+}
+ .mui_order_userInfo .mui_order_name{
+     display:inline-block;
+     width:40%;
+     white-space: pre-line;
+     vertical-align: top;
+     color:#000;
+	 font-size:14px;
+}
+ .mui_order_userInfo .mui_order_num{
+     width:60%;
+     display:inline-block;
+     white-space: pre-line;
+     vertical-align: top;
+     padding-left:0.13513513513513514rem;
+     box-sizing: border-box;
+     color:#000;
+	 font-size:14px;
+}
+ .mui_order_location{
+     padding:0 0.13513513513513514rem;
+     font-size:0.32432432432432434rem;
+     color:#000;
+     position:relative;
+}
+ .mui_order_location_case .mui_location_ico{
+     position:absolute;
+     left:-0.40540540540540543rem;
+     width: 0.267rem;
+	 height: 0.333rem;
+     font-size:0.3783783783783784rem;
+     top:0.10810810810810811rem;
+	 background:url(../img/ico_position.png) no-repeat center;
+	 background-size:100% 100%;
+}
+
+.mui_orderGoods_message{
+     border:none;
+     background:#f2f2f2;
+     color:#000;
+     font-size:0.32432432432432434rem;
+     word-break: break-all;
+}
+.mui_order_dispatching{
+	background-color:transparent;
+}
+.mui_order_dispatching:before{
+	display:none;
+}
+.mui_order_dispatching:after{
+	display:none;
+}
+.mui_order_dispatching .mui_rowDf{
+	background-color:#fff;
+	padding:0;
+}
+ .mui_order_dispatching .mui_rowDf:after{
+     left:0;
+}
+.mui_order_dispatching .mui_labelDf{
+	font-size: 0.32rem;
+	color: #000000;
+	margin:0;
+	padding: 0 0.32rem;
+}
+.mui_orderGoods_message{
+	padding:0;
+	margin:0;
+	background-color:#fff;
+	font-size: 0.32rem;
+	color: #808080;
+	min-height:1.867rem;
+	padding: 0.1rem 0.32rem;
+
+}
+ .mui_orderGoods_message::-webkit-input-placeholder{
+     color:#808080;
+     font-size:0.32rem;
+}
+.mui_saveBtn_row{
+	padding: 0 0.32rem;
+	margin-top:0.667rem;
+}
+.mui_saveBtn_row button{
+	background-color:#f180bf;
+	height: 0.427rem;
+	line-height:0.427rem;
+	padding:0;
+	font-size: 0.427rem;
+	display:block;
+	color: #ffffff;
+	height: 1.067rem;
+}
+.mui_saveBtn_row button:active{
+	background-color:#F1a0BF!important;
+}

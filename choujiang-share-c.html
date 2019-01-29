@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/choujiang-share.css" rel="stylesheet" />
+		<script src="js/pixel.js"></script>
+	</head>
+
+	<body style="background-color:#f2f2f2">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+			<h1 class="mui-title">抽奖区</h1>
+		</header>		
+		<div class="mui-content mui_shareContent" >
+			<div class="canvas_contain">
+				<!-- createImg -->
+				<div class="imgMask_c" >
+					<img id="createImg" src="" alt="">
+				</div>
+				<!-- data -->
+				<div class="mui_shareC_wrap" id="capture">
+					<div class="mui_userInfoCase">
+						<img class="avatarDf"  src="img/2.png" >
+						<span class="nameDf mui-ellipsis">我是大王</span>
+						<span class="tagTxtDf">我中奖了</span>
+					</div>
+					<p class="mui_shareSlogan">奖品：心相印手帕纸 茶语丝享纸巾4层24包</p>
+					<div class="mui_shareConatin">
+						<div>
+							<dl class="mui_prizeGoods">
+								<dt><img src="img/ico_prize.jpg" ></dt>
+								<dd class="mui_cj_dec mui-clearfix">
+									<span class="item_Df">参与人数：3000</span>
+									<span class="item_Df">中奖率：0.3%</span>
+								</dd>
+							</dl>
+						</div>
+						
+						<div class="mui_share_blockLine"></div>
+						
+						<div class="mui_shareQR_case">
+							<img class="mui_shareQR"  src="img/share_QR.png" >
+							<p class="mui_shareBtTxt">长按识别二维码，参与抽奖</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<p class="mui_shareBt_label">长按图片保存</p>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/toImg.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//let downLoadImg =document.getElementById('downLoadImg')
+			let imgMask = document.querySelector('.imgMask_c')
+			let createImg = document.getElementById('createImg')
+			
+			
+			mui.ready(function(){
+			html2canvas(document.querySelector("#capture")).then(canvas => {
+				imgMask.appendChild(canvas)
+				createImg.src= canvas.toDataURL("image/png");
+				})
+					
+			});	
+		
+		</script>
+	</body>
+
+</html>

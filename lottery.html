@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/lottery.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cropper.min.css"/>
+		<link href="css/mui.picker.min.css"/ rel="stylesheet">
+		<script src="js/pixel.js"></script>
+		<style type="text/css">
+			.mui-btn {
+				line-height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-icon-arrowleft mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">抽奖</h1>
+		</header>
+		<div class="mui-content lottery">
+		    <div class="mui--top">
+		    	设置奖品
+		    	<!--<a href="lottery-mall.html" class="mui-pull-right mui-navigate-right">
+		    		使用商城奖品 
+		    	</a>-->
+		    	<!--从商城选择的商品有移除商品-->
+		    	<!--<a class="mui-pull-right">移除商品</a>-->
+		    </div>
+		    <div class="mui--banner">
+		    	<img id="bannerImg" src="img/default.jpg"/>
+		    	<input type="file" name="file" id="file" accept="image/*" style="display: none;" />
+		    	<button type="button" id="changefilebtn" class="mui-btn mui-btn-outlined">更换奖品图片</button>
+		    </div>
+		    <div class="mui--cell">
+		    	<div class="mui--label">奖品名称：</div>
+		    	<input class="mui--input" maxlength="18" type="text" id="name" value="" placeholder="请输入奖品名称" />
+		    </div>
+		    <div class="mui--cell">
+		    	<div class="mui--label">奖品数量：</div>
+		    	<input class="mui--input" type="text" id="num" value="" placeholder="请输入数量" /> 
+		    	<div class="mui--unit">个</div>
+		    </div>
+		    <div class="mui--title">抽奖说明（选填）</div>
+		    <div class="mui--cell">
+		    	<textarea maxlength="100" class="mui--textarea" name="" rows="3" cols="" placeholder="请填写此次抽奖说明"></textarea>
+		    </div>
+		    <div class="mui--title">图文介绍（选填）</div>
+		    <div class="mui--cell">
+		    	<div style="padding: 0.32rem 0; width: 100%;">
+		    		<!--<div class="mui--img-warpper">
+			    		<img src="img/5.jpg"/>
+			    		<span onclick="removePic(event)" class="mui-icon mui-icon-closeempty"></span>
+			    	</div>-->
+			    	<label class="mui--upload-warpper">
+			    		<img style="width: 4rem;" src="img/upload-pic.png"/>
+			    		<input type="file" name="" id="img-introduce" accept="image/*" />
+			    	</label>
+		    	</div>
+		    </div>
+		    <div class="mui--title"><span id="way">到达设定时间自动开奖</span> <div class="mui-pull-right" id="changebtn">修改开奖条件</div></div>
+		   	<div id="time" class="mui--cell mui-navigate-right mui--padding way">
+			   	<div class="mui--label">开奖时间</div>
+			   	<div class="mui--item-content" id="timeValue"></div>
+		    </div>
+		    <div class="mui--cell mui--padding way">
+		    	<div class="mui--label">开奖人数</div>
+		    	<input class="mui--input" type="text" id="number" value="" placeholder="请输入开奖人数" /> 
+		    	<div class="mui--unit">个</div>
+		    </div>
+		    <div class="mui--cell mui--padding way">
+		    	<div class="mui--label" style="flex: 1;color: #808080;">由发起人手动开奖，如未手动开奖，3天后将过期</div>
+		    </div>
+		    <!--<div class="mui--cell mui--padding">
+		    	<div class="mui--label">口令 <i id="wordAlert" class="mui--icon-msg"></i></div>
+		    	<div class="mui--item-switch">
+		    		<div class="mui-switch mui-pull-right mui-switch-mini" id="wordSwitch">
+		    		  <div class="mui-switch-handle"></div>
+		    		</div>
+			   	</div>
+		    </div>
+		    <input type="text" class="mui--buttom-input" name="" id="word" style="display: none;" maxlength="20" placeholder="请填写口令内容（20字以内）" />-->
+		    <!--<div class="mui--cell mui--padding">
+		    	<div class="mui--label">参与者分享 <i id="shareAlert" class="mui--icon-msg"></i></div>
+		    	<div class="mui--item-switch">
+		    		<div class="mui-switch mui-pull-right mui-switch-mini">
+		    		  <div class="mui-switch-handle"></div>
+		    		</div>
+			   	</div>
+		    </div>-->
+		    <!--<div class="mui--cell mui--padding">
+		    	<div class="mui--label">关注店铺可抽奖</div>
+		    	<div class="mui--item-switch">
+		    		<div class="mui-switch mui-pull-right mui-switch-mini ">
+		    		  <div class="mui-switch-handle"></div>
+		    		</div>
+			   	</div>
+		    </div>-->
+		    <!--<div class="mui--cell mui--padding">
+		    	<div class="mui--label">首页推荐  <span class="mui--tip">(付费功能￥2.00)</span> <i id="priceAlert" class="mui--icon-msg"></i></div>
+		    	<div id="recommend" class="mui--item-switch">
+		    		<div class="mui-switch mui-pull-right mui-switch-mini">
+		    		  <div class="mui-switch-handle"></div>
+		    		</div>
+			   	</div>
+		    </div>-->
+		    <!--图片裁剪 -->
+		    <!--<div class="mui--cropper">
+		    	<div class="mui--img-warpper">
+		    		<img id="image" src="img/ico_cj.jpg"/>
+		    	</div>
+		    	<div class="mui--bottoms">
+		    		<div id="">
+		    			<button id="cropperConfirm" type="button" class="mui-btn mui-btn-blue" style="background-color: #E71A8C; border-color: #E71A8C;">确定</button>
+		    		</div>
+		    		<div id="">
+		    			<button id="cropperCancel" type="button" class="mui-btn">取消</button>
+		    		</div>
+		    	</div>
+		    </div>-->
+		    <!--点击 首页推荐，下面的按钮也要显示 支付¥2.00发起抽奖  （如果选择商城奖品的也要自动叠加价格）-->
+		    <button type="button" id="submit" class="mui-btn mui-btn-block mui--btn-red" style="margin-top: 50px;">
+		    	
+		    	发起新抽奖
+		    </button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/cropper.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var ltime = null;
+			var endD = new Date();
+			endD.setDate(endD.getDate() + 7);
+			var dtPicker = new mui.DtPicker({type: 'datetime', beginDate: new Date, endDate: endD});
+			mui('#time')[0].addEventListener('tap', function () {
+				dtPicker.show(function (selectItems) { 
+					document.getElementById('timeValue').innerText = selectItems.text;
+					ltime = selectItems.text;
+			    })
+			});
+			
+			
+			var picker = new mui.PopPicker();
+			var lotteryWay = 0; // 开奖方式 初始值为 0按时间自动开奖
+			showWay(lotteryWay);
+			picker.setData([{value:'0',text:'按时间自动开奖'}, {value:'1',text:'按人数自动开奖'}, {value:'2',text:'手动开奖'}]);
+			mui('#changebtn')[0].addEventListener('tap', function () {
+				picker.show(function (selectItems) {
+					document.getElementById('way').innerText = selectItems[0].text;
+					lotteryWay = selectItems[0].value;
+					showWay(lotteryWay);
+				})
+			});
+			var submitBtn = mui('#submit')[0];
+			
+			mui('#num')[0].onblur = function () {
+				validateNum(this.value)
+			};
+			/* 提交按钮 */
+			submitBtn.addEventListener('tap', function () {
+				var name = mui('#name')[0].value;
+				var num = mui('#num')[0].value;
+				var number = mui('#number')[0].value;
+				if (!name) {
+					mui.toast('请输入奖品名称');
+					return;
+				}
+				if (!validateNum(num)) {
+//					mui.toast('请输入奖品数量');
+					return;
+				}
+				if (lotteryWay == 0 && !ltime) {
+					mui.toast('请选择开奖时间');
+					return;
+				}
+				if (lotteryWay == 1 && !number) {
+					mui.toast('请输入开奖人数');
+					return;
+				}
+			});
+			/* 奖品图片 */
+			var fileEl = mui('#file')[0];
+			fileEl.addEventListener('change', function (e) {
+				var obj = e.target.files[0];
+				if (!obj) {return;}
+				var url = getObjectURL(obj);
+				mui('#bannerImg')[0].src = url;
+			});
+
+			/* 奖品图片介绍 */
+			mui('#img-introduce')[0].addEventListener('change', function (e) {
+				var obj = e.target.files[0];
+				if (!obj) {return;}
+				var url = getObjectURL(obj);
+				var warpper = document.createElement('div');
+				warpper.className = 'mui--img-warpper';
+				warpper.innerHTML = '<img src="'+url+'"/><span onclick="removePic(event)" class="mui-icon mui-icon-closeempty"></span>'; 
+				var existed = mui('.mui--upload-warpper')[0];
+				existed.parentNode.insertBefore(warpper, existed);
+			});
+			
+			function removePic (e) {
+				var p = e.target.parentNode;
+				p.parentNode.removeChild(p);
+			}
+
+			/* 点击更换奖品图片 */
+			
+			mui('#changefilebtn')[0].addEventListener('tap', function () {
+				fileEl.click();
+			});
+			/*mui('#wordAlert')[0].addEventListener('tap', function () {
+				mui.alert('需输入口令才能参与抽奖，可使用关注公众号或加好友的方式获取口令','口令说明', '知道了')
+			});
+			mui('#shareAlert')[0].addEventListener('tap', function () {
+				mui.alert('开启后，参与者可以分享抽奖给TA的好友，帮助抽奖快速传播。如发起人分享了抽奖分享图，分享图的传播不受抽奖功能限制','参与者分享说明', '知道了')
+			});
+			mui('#priceAlert')[0].addEventListener('tap', function () {
+				mui.alert('首页推荐，每次付费2元。支付后自动审核，如未能审核款额将原路退回','首页推荐付费说明', '知道了')
+			});*/
+			function getObjectURL(file) {
+			    var url = null;  
+			    if (window.createObjcectURL != undefined) {  
+			        url = window.createOjcectURL(file);  
+			    } else if (window.URL != undefined) {  
+			        url = window.URL.createObjectURL(file);  
+			    } else if (window.webkitURL != undefined) {  
+			        url = window.webkitURL.createObjectURL(file);  
+			    }
+			    return url;  
+			}
+			/* 显示抽奖方式 */
+			function showWay (idx) {
+				mui('.way').each(function () {
+					this.style.display = 'none';
+				});
+				if (mui('.way')[idx]) {
+					mui('.way')[idx].style.display = 'flex'
+				}
+			}
+			/* 验证奖品数量 */
+			function validateNum (value) {
+				var regPos = /^\d+$/;
+				if (!value) {
+					mui.toast('请输入奖品数量');
+					return false;
+				}
+				if (regPos.test(value)) {
+					if (value > 100) {
+						mui.toast('奖品数量不能超过100');
+						return false;
+					}
+					if (value < 1) {
+						mui.toast('奖品数量不能小于0');
+						return false;
+					}
+					return true;
+				}
+				mui.toast('奖品数量必须为数字');
+				return false;
+			}
+			function setTimeText (d) {
+				console.log(d);
+				var str = '';
+				str += d.m.value + '月' + d.d.value + '日' + ' ' + d.h.value + ':' + d.i.value
+				document.getElementById('timeValue').innerText = str;
+			}
+		</script>
+	</body>
+
+</html>

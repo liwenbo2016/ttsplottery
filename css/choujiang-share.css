@@ -1,0 +1,278 @@
+.mui-bar-nav{
+	background-color:#fff;
+	box-shadow: none;;
+}
+.mui-bar-nav .mui-action-back {
+	color:#000!important;
+}
+.mui_shareContent{
+	min-height:100vh;
+	background-color:#f2f2f2;
+	
+}
+.mui_shareWrap{
+	position:relative;
+	width:8rem;
+	padding:0.333rem;
+	margin:1.52rem auto 0;
+	background:#fff;
+}
+.mui_shareBorder{
+	position:relative;
+	z-index: -1;
+	border: solid 0.04rem #e71a8c;
+	width: 7.333rem;
+	padding-top:1.05rem;
+	padding-bottom:1.04rem;
+}
+.mui_shareBorder .mui_shareLogo{
+	display:block;
+	margin:0 auto ;
+	width: 3.467rem;
+}
+.mui_shareBorder .mui_shareTxt{
+	display:block;
+	width:5rem;
+	margin:1.06rem auto 0;
+}
+.mui_shareBorder .mui_shareQR{
+	display:block;
+	margin: 0.64rem auto 0;
+	width:4rem;
+}
+.mui_shareBorder .mui_shareBtTxt{
+	text-align:center;
+	font-size: 0.317rem;
+	color: #808080;
+}
+.mui_cjBtnRow{
+	padding: 1rem 0.32rem 0;
+}
+.mui_cjBtnRow .mui-btn{
+	display:block;
+	background-color: #f180bf;
+	border-radius: 0.067rem;
+	padding:0;
+	height: 1.067rem;
+	border:0;
+	line-height: 1.067rem;
+	font-size: 0.373rem;
+	color: #ffffff;
+}
+#createImg{
+	width:100%;
+	display:block;
+}
+.imgMask_a{
+	position:absolute;
+	left:50%;
+	top:0;
+	background-color:#fff;
+	z-index: 1;
+	width: 8rem;
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+.imgMask_b{
+	position:absolute;
+	left:50%;
+	top:0;
+	background-color:#fff;
+	z-index: 1;
+    width: 8.76rem;
+	overflow: hidden;
+	transform: translateX(-50%);
+}
+.imgMask_c{
+	position:absolute;
+	left:50%;
+	top:0;
+	transform: translateX(-50%);
+    width: 8.76rem;
+	background-color:#fff;
+	z-index: 1;
+	overflow: hidden;
+}
+.canvas_contain{
+	position:relative;
+	background-color:#f2f2f2;
+}
+.canvas_contain canvas{
+	width:100%;
+	position:absolute;
+	left:-200vw;
+	top:0;
+	z-index: -1;
+}
+/* b */
+.mui_shareB_wrap{
+	position:relative;
+	z-index:-1;
+	padding:0.28rem;
+	background-color:#e71a8c;
+	width:8.76rem;
+	margin: 0.376rem auto 0;
+}
+.mui_shareB_wrap .mui_userInfoCase{
+	padding-top:0.28rem;
+	padding-left: 0.1rem;
+}
+.mui_shareB_wrap .mui_userInfoCase .avatarDf{
+	width:1.173rem;
+	height:1.173rem;
+	border-radius:50%;
+	vertical-align: middle;
+}
+.mui_shareB_wrap .mui_userInfoCase .nameDf{
+	font-size: 0.374rem;
+	color: #ffffff;
+	vertical-align: middle;
+	padding-left:0.28rem;
+}
+.mui_shareB_wrap .mui_shareSlogan{
+	font-size: 0.327rem;
+	color: #ffffff;
+	margin-top:0.6rem;
+	line-height:1.2;
+	padding-left: 0.1rem;
+}
+
+.mui_shareConatin{
+	background-color:#fff;
+	border-radius:0.1rem;
+}
+
+.mui_prizeGoods{
+	background-color:transparent;
+	padding:0.32rem;
+	margin:0; 
+}
+.mui_prizeGoods li{
+	background-color:#fff;
+}
+.mui_prizeGoods{
+	padding-bottom:0.1rem ;
+	position:relative;
+	margin:0;
+}
+.mui_prizeGoods dt{
+	min-height:0.6rem;
+}
+.mui_prizeGoods  dt img{
+	width:100%;
+	display:block;
+}
+.mui_prizeGoods dd{
+	padding: 0.1em  0.2rem  ;
+	margin:0;
+}
+.mui_prizeGoods dd p{
+	margin:0;
+	color:#000;
+	line-height: 0.64rem;
+	font-size: 0.274rem;
+}
+.mui_prizeGoods dd.mui_cj_dec{
+	padding-top:0.1rem;
+}
+.mui_prizeGoods dd.mui_cj_bt{
+	font-size:0;
+	line-height:1;
+}
+.mui_prizeGoods dd.mui_cj_bt .dataDf{
+	color:#808080;
+	vertical-align: middle;
+	font-size: 0.253rem;
+	line-height:1;
+}
+.mui_share_blockLine{
+	height:0.707rem;
+	position:relative;
+	padding:0.74rem 0.32rem 0 0.32rem;
+	box-sizing: border-box;
+}
+.mui_share_blockLine:after{
+	content:"";
+	display:block;
+	height:1px;
+	width:100%;
+	background-color:#e71a8c;
+}
+.mui_shareQR_case{
+	padding:0 0.32rem 0.32rem;
+}
+.mui_shareQR_case .mui_shareQR{
+	display:block;
+	margin: 0.64rem auto 0;
+	width:4rem;
+}
+.mui_shareQR_case .mui_shareBtTxt{
+	text-align:center;
+	font-size: 0.317rem;
+	color: #808080;
+}
+.mui_shareBt_label{
+	font-size: 0.427rem;
+	color: #000000;
+	margin-top:0.7rem;
+	text-align:center;
+}
+/* c */
+.mui_cj_dec .prize_txtDf{
+	color: #f7f405;
+}
+.mui_shareC_wrap{
+	position:relative;
+	z-index: -1;
+	padding:0.28rem;
+	background-color:#e71a8c;
+	width:8.76rem;
+	margin: 0.376rem auto 0;
+}
+.mui_shareC_wrap .mui_userInfoCase{
+	padding-top:0.28rem;
+	position:relative;
+}
+.mui_shareC_wrap .mui_userInfoCase .avatarDf{
+	width:1.173rem;
+	height:1.173rem;
+	border-radius:50%;
+	vertical-align: middle;
+}
+.mui_shareC_wrap .mui_userInfoCase .nameDf{
+	font-size: 0.374rem;
+	color: #ffffff;
+	vertical-align: middle;
+	padding-left:0.28rem;
+	width: 3.2rem;
+    display: inline-block;
+}
+.mui_shareC_wrap .mui_userInfoCase .tagTxtDf{
+	font-size: 0.8rem;
+	color: #f7f405;
+	position:absolute;
+	right:.32rem;
+	top:0.4864864864864865rem ;
+	line-height:1;
+}
+.mui_shareC_wrap .mui_shareSlogan{
+	font-size: 0.327rem;
+	color: #f7f405;
+	margin-top:0.6rem;
+	line-height:1.2;
+}
+.mui_shareC_wrap .mui_prizeGoods dd.mui_cj_dec{
+	padding:0;
+	box-shadow: 0rem 0.013rem 0.12rem 0rem 
+		rgba(127, 127, 127,  0.35);
+	padding: 0.2rem 0;	
+}
+.mui_shareC_wrap .mui_prizeGoods dd.mui_cj_dec .item_Df{
+	width:50%;
+	color:#000;
+	font-size: 0.253rem;
+	text-align:center;
+	display:block;
+	float:left;
+}
+

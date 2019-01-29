@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,telephone=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/lottery.css"/>
+		<script src="js/pixel.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-icon-arrowleft mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">中奖者信息</h1>
+		</header>
+		<div class="mui-content" style="padding-bottom: 1.486rem;">
+		    <div class="mui-segmented-control mui--tab">
+		        <a class="mui-control-item mui-active" href="#item1">已填写（4）</a>
+		        <a class="mui-control-item" href="#item2">未填写（1）</a>
+		    </div>
+		    <div class="mui--tips">
+		    	已告知中奖者在  <span>01月22日 19：00 前</span> 填写中奖信息，地址填写和更新将发通知给你；开奖后中奖者将不能填写地址。
+		    </div>
+		    <div id="item1" class="mui-control-content mui-active">
+                <div class="mui--row-warpper">
+                	<div class="mui--name"><img src="img/2.png"/> 我是大王 </div>
+                	<div class="mui--address">
+                		<div class="mui--contact"><span>张三</span> 13312345678</div>
+                		<div class="mui--addr">广东省深圳市龙华新区民治街道新牛路U创谷C11-15室</div>
+                	</div>
+                </div>
+                <div class="mui--row-warpper">
+                	<div class="mui--name"><img src="img/2.png"/> 我是大王 </div>
+                	<div class="mui--address">
+                		<div class="mui--contact"><span>张三</span> 13312345678</div>
+                		<div class="mui--addr">广东省深圳市龙华新区民治街道新牛路U创谷C11-15室</div>
+                	</div>
+                </div>
+                <div class="mui--row-warpper">
+                	<div class="mui--name"><img src="img/2.png"/> 我是大王 </div>
+                	<div class="mui--address">
+                		<div class="mui--contact"><span>张三</span> 13312345678</div>
+                		<div class="mui--addr">广东省深圳市龙华新区民治街道新牛路U创谷C11-15室</div>
+                	</div>
+                </div>
+                <div class="mui--row-warpper">
+                	<div class="mui--name"><img src="img/2.png"/> 我是大王 </div>
+                	<div class="mui--address">
+                		<div class="mui--contact"><span>张三</span> 13312345678</div>
+                		<div class="mui--addr">广东省深圳市龙华新区民治街道新牛路U创谷C11-15室</div>
+                	</div>
+                </div>
+                <button type="button" id="btn" class="mui-btn mui-btn-blue mui-btn-bottom">一键复制全部</button>
+            </div>
+            <div id="item2" class="mui-control-content">
+                <div class="mui--row-warpper">
+                	<div class="mui--name">
+                		<img src="img/2.png"/> 我是大王
+                		<div class="mui-pull-right">（未填写）</div>
+                	</div>
+                </div>
+            </div>
+            
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			/* 单项复制 */
+			var clipboard = new ClipboardJS('#item1 .mui--row-warpper', {
+			    text: function(trigger) {
+			        return trigger.innerText;
+			    }
+			});
+			clipboard.on('success', function(e) {
+				mui.toast('复制成功');
+			});
+			
+			/* 一键复制 */
+			var allclip = new ClipboardJS('#btn', {
+				text: function(trigger) {
+					var txt = '';
+					mui.each(document.querySelectorAll('.mui--address'), function () {
+						txt += this.innerText;
+					});
+					return txt;
+				}
+			})
+			allclip.on('success', function (e) {
+				mui.toast('一键复制成功');
+			});
+//			allclip.on('error', function () {
+//				console.log('sss');
+//			});
+		</script>
+	</body>
+
+</html>

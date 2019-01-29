@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通天尚品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css"/>
+		<link rel="stylesheet" href="css/iconfont-cj.css" />
+		<link rel="stylesheet" href="css/commit-cj.css" />
+		<link rel="stylesheet" href="css/my-cj.css" />
+		<script src="js/pixel.js"></script>
+	</head>
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left mui-icon-color"></a>
+		    <h1 class="mui-title">我的</h1>
+		</header>-->
+		<div class="mui-content">
+		    <div class="mui-background-images">
+		    	<div class="mui-images-header">
+		    		<div class="mui-header-info">
+		    			<img src="img/2.png" alt="" class="mui-img-size"/>
+		    		</div>
+		    		<div class="mui-header-mess">
+		    			<span class="mui-header-me">恭喜发财</span>
+		    		</div>
+		    	</div>
+		    	<ul class="mui-table-view mui-grid-view mui-grid-9 mui-modal-box">
+			        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+			            <a href="#" id="lucky">
+			                <span class="mui-span-widths">
+			    				<img src="img/icon-gifts.png" alt=""/>
+			    			</span>
+			                <div class="mui-media-body">抽奖明细</div>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+			            <a href="#" id="launch">
+			                <span class="mui-span-widths">
+			    				<img src="img/icon-list.png" alt=""/>
+			    			</span>
+			                <div class="mui-media-body">发起明细</div>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+			            <a href="#" id="winning">
+			                <span class="mui-span-widths">
+			    				<img src="img/icon-cup.png" alt=""/>
+			    			</span>
+			                <div class="mui-media-body">中奖明细</div>
+			            </a>
+			        </li>    
+			    </ul>
+		    </div>
+		    <ul class="mui-table-view mui-table-view-chevron mui-modeal-case">
+		<!-- 		<li class="mui-table-view-cell mui-li-background">
+					<a href="#" class="mui-navigate-right">
+						<img class="mui-img-sizes mui-pull-left" src="img/3.png" alt="" height="30"/>
+						<span class="mui-modeal-mess mui-pull-left">奖品核销</span>
+					</a>
+				</li> -->
+				
+				<!-- 点击弹出客服 -->
+				<li class="mui-table-view-cell mui-li-background">
+					<a href="#" class="mui-navigate-right"> 
+						<div class="mui-img-left-width mui-pull-left">
+							<img class="mui-img-sizes " src="img/mylogo.png" alt=""/>
+						</div>
+						<div class="mui-img-right-width mui-pull-left">
+							<span class="mui-modeal-mess">联系客服</span>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-li-background">
+					<a href="my-cjFAQ.html" class="mui-navigate-right">
+						<div class="mui-img-left-width mui-pull-left">
+							<img class="mui-img-sizes " src="img/mylogo.png" alt=""/>
+						</div>
+						<div class="mui-img-right-width mui-pull-left">
+							<span class="mui-modeal-mess">常见问题</span>
+						</div>
+					</a>
+				</li>
+				<!--链接2.0收货意见反馈-->
+				<li class="mui-table-view-cell mui-li-background">
+					<a href="#" class="mui-navigate-right">
+						<div class="mui-img-left-width mui-pull-left">
+							<img class="mui-img-sizes " src="img/mylogo.png" alt=""/>
+						</div>
+						<div class="mui-img-right-width mui-pull-left">
+							<span class="mui-modeal-mess">意见反馈</span>
+						</div>
+					</a>
+				</li>
+				<!--链接2.0收货地址-->
+				<li class="mui-table-view-cell mui-li-background">
+					<a href="#" class="mui-navigate-right">
+						<div class="mui-img-left-width mui-pull-left">
+							<img class="mui-img-sizes " src="img/mylogo.png" alt=""/>
+						</div>
+						<div class="mui-img-right-width mui-pull-left">
+							<span class="mui-modeal-mess">收货地址</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-link" href="choujiang.html">
+		        <span class="mui-icon iconfont icon-lipin"></span>
+		        <span class="mui-tab-label">抽奖</span>
+		    </a>
+		    <a class="mui-tab-item mui-link" href="lottery.html">
+		        <span class="mui-icon iconfont icon-jiahao" ></span>
+		        <span class="mui-tab-label">发起抽奖</span>
+		    </a>
+		    <a class="mui-tab-item mui-active mui-link">
+		        <span class="mui-icon iconfont icon-wode" href="my-cj.html"></span>
+		        <span class="mui-tab-label">我的</span>
+		    </a>
+		</nav>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		
+			mui('body').on('tap', 'a', function () {  // 解决a标签点击无效
+				if (this.href) {
+					window.location.href = this.href;
+				}
+			});
+			document.getElementById('lucky').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'my-cjLuckyDraw.html',
+					id: 'my-cjLuckyDraw.html',
+					show: {
+			            aniShow: 'pop-in',
+			            duration: 250
+			        }
+				})	
+			});
+			document.getElementById('launch').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'my-cjLaunch.html', 
+					id: 'my-cjLaunch.html',
+					show: {
+			            aniShow: 'pop-in',
+			            duration: 250
+			        }
+				})	
+			});
+			document.getElementById('winning').addEventListener('tap', function() {
+				mui.openWindow({
+					url: 'my-cjWinning.html', 
+					id: 'my-cjWinning.html',
+					show: {
+			            aniShow: 'pop-in',
+			            duration: 250
+			        }
+				})	
+			});
+		</script>
+	</body>
+
+</html>

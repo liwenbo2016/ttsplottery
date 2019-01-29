@@ -1,0 +1,275 @@
+/*我的页面 -- 样式*/
+/*==========================================================================================*/
+.mui-background-images{
+	width: 100%;
+    height: 5.405405405405405rem;
+    background: url(../img/5.jpg) center repeat-y;
+    background-size: cover;
+    position:relative;
+}
+.mui-images-header{
+	width:80%;
+	position:absolute;
+	top:1.2rem;
+	left:10%;
+	overflow:hidden;
+}
+.mui-header-info{
+	float:left;
+	height:1.6rem;
+	width:1.6rem;
+	background:#fff;
+	border-radius:50%;
+}
+.mui-header-mess{
+	float:left;
+	color:#000;
+	line-height:1.622rem;
+    margin-left:0.270rem;
+	font-size: 0.373rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+}
+.mui-img-size{
+	width:100%;
+}
+.mui-modal-box{
+	width:90% !important;
+    position:absolute;
+    top:3.8rem;
+    left:5%;
+    background-color: #ffffff;
+	border-radius: 0.133rem;
+}
+.mui-span-widths {
+    width: 1.081rem;
+    height: 1.081rem;
+    margin: 0 auto;
+    display: block;
+}
+.mui-span-widths img{
+	width:75%;
+}
+/*修改mui默认的九宫格的样式*/
+.mui-grid-view.mui-grid-9 {
+    border:0;
+    background:#fff;
+}
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+    padding:0rem;
+    border:0;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    font-size:0.351rem ;
+    margin-top:0;
+    padding-bottom: 0.5rem;
+}
+.mui-modeal-case{
+   margin-top:0.946rem;
+}
+.mui-navigate-right{
+	overflow:hidden;
+}
+.mui-img-left-width{
+	width:10%;
+}
+.mui-img-right-width{
+	width:30%;
+	/*margin-top:11px;*/
+	margin-top: 0.1rem;
+}
+.mui-img-sizes{
+	/*width:100%;*/
+	margin-top:0.162rem;
+	width: 0.4rem;
+}
+.mui-modeal-mess{
+	font-size:0.373rem;
+}
+
+
+/*抽奖明细 发起明细  中奖明细  等页面 -- 样式*/
+/*==========================================================================================*/
+
+/*修改mui默认的tab切换的样式*/
+.mui-segmented-control {
+    border:0; 
+    margin-top:0.027rem;
+    border-radius:0rem;
+    background-color:#fff; 
+}
+.mui-segmented-control .mui-control-item {
+	color:#000;
+    border-left:0;
+}
+.mui-segmented-control .mui-control-item.mui-active {
+    color: #000;
+    background:#fff;
+    border-bottom:0.054rem solid #e82290;
+}
+.mui-table-view {
+    background-color:transparent;
+}
+.mui-table-view:before, .mui-table-view-cell:after, .mui-table-view:after {
+    position:inherit;
+}
+.mui-table-view-cell {
+    padding:0.24rem 0.405rem;
+}
+.mui-table-view-cell .mui-navigate-right:after {
+	font-size: 0.5rem;
+	color: #000;
+}
+
+/*修改mui默认的mui-content-padded的样式*/
+.mui-content-padded {
+    margin:0;
+    background:#fff;
+    position:relative;
+    overflow:hidden;
+}
+.mui-info-position{
+	position:absolute;
+	right:0;
+	top:0.270rem;
+	z-index: 2;
+	color:#e71a8c;
+	padding:0.054rem 0.135rem;
+	background:#fce6f2;
+	border-radius:0.135rem 0rem 0rem 0.135rem;
+}
+.mui-img-box{
+	max-width:100%;
+	height: auto;
+}
+.mui-info-size{
+	font-size:0.351rem;
+}
+.mui-info-color{
+	color:#000;
+}
+.mui-mess-color{
+	color:#ccc;
+}
+.mui-margin-left{
+	line-height:0.757rem;
+	padding-left:0.270rem;
+}
+.mui-li-background{
+	background:#fff;
+	border-bottom: 0.027rem solid #F2F2F2;
+	/*margin-top:0.270rem;*/
+}
+.mui-font-hidden{
+	width:80%;
+	margin-top:0.081rem;
+	display: block;
+	overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.mui-right-info{
+	width:20%;
+	display:block;
+	text-align:center;
+	margin-top:0.081rem;
+}
+
+
+/*抽奖详情页面 -- 样式*/
+/*==========================================================================================*/
+
+.mui-info-positions{
+	position:absolute;
+	right:0.270rem;
+	top:0.270rem;
+	z-index: 2;
+	color:#e71a8c;
+	padding:0.05406rem 0.135rem;
+	background:#fce6f2;
+	border-radius:0.135rem;
+}
+.mui-li-backred{
+	background:#fce6f2;
+}
+.mui-texts-center{
+	width:88%;
+	margin:0 auto;
+	padding:0.270rem;
+}
+.mui-top-content{
+	margin-top:0.270rem;
+}
+.mui-biaoti-center{
+	text-align: center;
+	font-size:0.649rem;
+	padding:0.946rem 0rem;
+	font-weight:bold;
+	border-top:0.0270rem solid #f2f2f2;
+}
+.mui-box-margin{
+	width:90%;
+	margin:0 auto;
+	padding-bottom:0.540rem;
+}
+.mui-span-padding{
+	display:block;
+	padding:0.135rem 0rem;
+    font-size:0.351rem;
+}
+.mui-border-color {
+	border-radius:0.135rem;
+    margin:0.135rem 0rem 0.270rem 0rem;
+    border:0.027rem  solid #e71a8c !important;
+}
+.mui-titles-info{
+    font-size:0.351rem;
+    padding:0.135rem 0rem;
+    text-align:center;
+    border-radius:0.135rem 0.135rem 0rem 0rem;
+}
+.mui-titles-color{
+    background:#fce6f2;
+}
+.mui-titles-info a{
+    color:#e71a8c;
+}
+.mui-btu-plus{
+    padding-top:0.540rem;
+    text-align:center;
+}
+.mui-bottom-img{
+    padding-top:0.270rem;
+    width:60%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.mui-bottom-img a{
+    float:left;
+    width:16.6%;
+    display:block;
+}
+.mui-bottom-img a img{
+    width:90%;
+    padding-left:0.135rem;
+}
+ 
+
+/*修改mui默认的btn的样式*/
+.mui-btn-block {
+    font-size:0.405rem;
+    width: 90%;
+    margin:0.270rem auto;
+    padding: 0.305rem 0;
+}
+.mui-btn-danger, .mui-btn-negative, .mui-btn-red {
+    border:0;
+    background-color: #f180bf;
+}
+.mui-link-info{
+    display:block;
+    color:#ccc;
+    padding-bottom: 0.270rem;
+    text-align: center;
+}

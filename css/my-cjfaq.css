@@ -1,0 +1,47 @@
+
+
+ .mui-bar-nav a.mui-icon-arrowleft:before{
+      vertical-align: middle;
+ }
+  .mui_navBack_label{
+      font-size: 0.4rem;
+      vertical-align: middle;
+	  color: #000000;
+ }
+ .list_IcoTxt{
+	 margin-top:0!important;
+ }
+ .list_IcoTxt .mui_icoDf{
+	width: 0.4rem;
+	height: 0.4rem;
+	margin-top:0.05rem;
+ }
+ .list_IcoTxt .mui_txtDf{
+	font-size: 0.373rem;
+	color: #000000;
+	vertical-align: middle;
+ }
+ .list_IcoTxt li.mui-table-view-cell:after{
+	 left:0;
+	 background-color:#e2e2e2;
+ }
+ /* detail */
+ .mui_guideWrap_item{
+      margin-bottom:0.2702702702702703rem;
+ }
+  .mui_guideWrap .mui_titleDf{
+      background-color:#fff;
+      padding:0.2rem 0.32rem;
+      color:#000;
+      margin:0;
+	  font-size: 0.373rem;
+      border-bottom:solid 1px #f2f2f2;
+ }
+  .mui_guideWrap .mui_dec_case p{
+      background-color:#fff;
+      padding:0.2rem 0.32rem;
+      font-size: 0.293rem;
+      margin:0;
+      color:#000;
+	  line-height:1.8;
+ }

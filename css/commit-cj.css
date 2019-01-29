@@ -1,0 +1,33 @@
+* {
+	touch-action:pan-y;
+}
+
+/*清除滚动条*/
+.mui-scrollbar {   
+    display:none !important;
+}
+
+.mui-icon-color{
+	color:#000;
+}
+
+/*修改mui默认的底部导航栏的样式*/
+.mui-bar-tab .mui-tab-item {
+    color: #000;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: #e71a8c;
+}
+.mui-bar {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0.0270rem rgba(0,0,0,.15); 
+    box-shadow: 0 0 0.0270rem rgba(0,0,0,.15);  
+}
+/* 返回颜色 */
+.mui-action-back{
+	color:#000;
+}
+/* content 背景默认改成透明 */
+.mui-content{
+	background-color:transparent;
+}
